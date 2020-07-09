@@ -1,0 +1,142 @@
+---
+title: "Data Science Workflow"
+author: "Matthew Edwards"
+date: "09/07/2020"
+output:
+  revealjs::revealjs_presentation:
+    #theme: night
+    transition: none
+    center: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+<style type="text/css">
+  .reveal p {
+    text-align: left;
+  }
+  .reveal ul {
+    display: block;
+  }
+  .reveal ol {
+    display: block;
+  }
+</style>
+
+# Data Engineering and Analysis
+
+Data science can be divied into two fields:
+
+- **Data Engineers** provided access to data and compute.
+- **Data Analysts** explore and perform inference on the data.
+
+## Data Analysis Stages
+
+ 1. Data Tidying / Wrangling
+ 2. Data Splitting
+ 3. Exploratory Data Analysis
+ 4. Data Preprocessing
+ 5. Model Building
+ 6. Model Evaluation
+ 
+These stages are iterated.
+
+# Data Tidying
+
+Obtain [tidy data](https://vita.had.co.nz/papers/tidy-data.pdf):
+
+1. Each variable forms a column.
+2. Each observation forms a row.
+3. Each type of observational unit forms a table
+
+One of these variables is the *output* (to be predicted) and the others are *predictors* (to predict).
+
+# Data Splitting
+
+Obtain two data sets:
+
+1. **Training set**: this data set is used to build the model
+2. **Test set**: this data set is used to evaluate the model
+
+The test set is *only* used at the end of the project. The training set is also used for exploratory data analysis.
+
+# Exploratory Data Analysis (EDA)
+
+A distribution describes the variation within and between variables.
+
+Three distrubtion types:
+- predictor distributions
+- predictor-output distributions
+- predictor-predictor distributions
+
+This stage affects data preproceing and model building.
+
+## Predictor Distributions
+
+Numeric:
+
+- Centre (e.g. mean)
+- Spread (e.g. variance)
+- Skewness
+- Outliers
+
+Nominal:
+
+- Number of levels
+- Sparsity
+- Balance
+
+## Predictor-output Distributions
+
+Type of relationship:
+
+- Weak vs. Strong
+- Linear vs. Non-linear
+
+## Predictor-predictor Distributions
+
+These distributions are very important for model building.
+
+# Data Preprocessing
+
+EDA is used to suggest the variable transformations required for model building.
+
+## Univariate Transformations
+
+- Log / Box-Cox: remove skew
+- Normalise: centre and scale
+- Group nominal levels
+- Basis funcntions: non-linear predictor-output relationhships
+- Discretising: numeric to nominal
+
+## Multivariate Transformations
+
+- PCA / PLS: strong linear predictor-predictor relationships
+- Kernal PCA: strong non-linear predictor-predictor relationships
+- Combining variables manually: e.g. weight and height to bmi. 
+- Feature Embedding: nominal predictors with many levels
+
+# Model Building
+
+Popular models include:
+
+- Logistic Regression
+- Random Forest
+- Support Vector Machine
+
+Each of these models has different preprocessing requirements.
+
+# Model Evaluation
+
+At this stage the model is evaluated for it's performance. However, how the model is evaluated can be decided early on in the workflow. 
+
+Evaluation Metrics (classification):
+
+- Accuracy: percent of correct predictions
+- Sensitivity: percent of correct positive predictions
+- Spesificity: percent of correct negative predictions
+- ROC Curve: Sensitivity and Spesificity
+- AUC: single measure of ROC Curve
+- Cost Benefit measures: derived from Sensitivity and Spesificity

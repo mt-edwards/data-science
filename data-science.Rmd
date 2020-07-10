@@ -9,10 +9,6 @@ output:
     center: false
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
-
 <style type="text/css">
   .reveal p {
     text-align: left;
@@ -25,23 +21,55 @@ knitr::opts_chunk$set(echo = FALSE)
   }
 </style>
 
-# Data Engineering and Analysis
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
 
-Data science can be divied into two fields:
+# Data Science and Data Engineering
 
-- **Data Engineers** provided access to data and compute.
-- **Data Analysts** explore and perform inference on the data.
+Data Science and Data Engineering are quite different
 
-## Data Analysis Stages
+- **Data Engineering**: data storage, access and compute.
+- **Data Science**: data exploration and induction.
 
- 1. Data Tidying / Wrangling
- 2. Data Splitting
- 3. Exploratory Data Analysis
- 4. Data Preprocessing
- 5. Model Building
- 6. Model Evaluation
+*"You should only do engineering if you know what you are doing and you should only do science if you do not."* - Richard Hamming
+
+Data Science is similar to **Statistics**
+
+## Data Science - Data
+
+Types of data:
+
+- **Tabular**
+- Text (Natural Language Processing)
+- Images (Computer Vision)
+
+## Data Science - Projects
+
+Types projects:
+
+- **Supervised Learning** (predict output)
+- Unsupervised Learning
+- Semi-supervised Learning
+- Reinforcement Learning
+
+Types of supervised learning:
+
+- **Classification** (nominal output)
+- Regression (numeric output)
+
+## Data Science - Stages
+
+Data Science stages for a supervised learning project:
+
+- Data Tidying
+- Data Splitting
+- Exploratory Data Analysis
+- Data Preprocessing
+- Model Building
+- Model Evaluation
  
-These stages are iterated.
+These stages are **iterated** (not numbered).
 
 # Data Tidying
 
@@ -51,7 +79,14 @@ Obtain [tidy data](https://vita.had.co.nz/papers/tidy-data.pdf):
 2. Each observation forms a row.
 3. Each type of observational unit forms a table
 
-One of these variables is the *output* (to be predicted) and the others are *predictors* (to predict).
+One of these variables is the *output* (to be predicted) and the others are *predictors*.
+
+## Data Tidying
+
+Data tidying requires some exploratory data analysis:
+
+- Variable selection
+- Data quality
 
 # Data Splitting
 
@@ -64,14 +99,15 @@ The test set is *only* used at the end of the project. The training set is also 
 
 # Exploratory Data Analysis (EDA)
 
-A distribution describes the variation within and between variables.
+EDA is all about distributions. A distribution describes the variation within and between variables.
 
-Three distrubtion types:
+Types of distribution:
+
 - predictor distributions
 - predictor-output distributions
 - predictor-predictor distributions
 
-This stage affects data preproceing and model building.
+This stage affects data preprocessing and model building.
 
 ## Predictor Distributions
 
@@ -90,10 +126,10 @@ Nominal:
 
 ## Predictor-output Distributions
 
-Type of relationship:
+Types of relationship:
 
-- Weak vs. Strong
-- Linear vs. Non-linear
+- Weak or Strong
+- Linear or Non-linear
 
 ## Predictor-predictor Distributions
 
@@ -101,22 +137,23 @@ These distributions are very important for model building.
 
 # Data Preprocessing
 
-EDA is used to suggest the variable transformations required for model building.
+Data Preprocessing is about transforming the data so that a model can processes it.
+
+Often each model requires a different preprocessing pipeline.
+
+EDA is used to suggest the variable transformations required by a model.
 
 ## Univariate Transformations
 
 - Log / Box-Cox: remove skew
 - Normalise: centre and scale
-- Group nominal levels
-- Basis funcntions: non-linear predictor-output relationhships
-- Discretising: numeric to nominal
+- Grouping: combining nominal levels
 
 ## Multivariate Transformations
 
-- PCA / PLS: strong linear predictor-predictor relationships
-- Kernal PCA: strong non-linear predictor-predictor relationships
-- Combining variables manually: e.g. weight and height to bmi. 
-- Feature Embedding: nominal predictors with many levels
+- Linear Projection: strong linear predictor-predictor relationships
+- Non-linear Projection: strong non-linear predictor-predictor relationships
+- Combining variables manually: e.g. weight and height to BMI. 
 
 # Model Building
 
@@ -136,7 +173,12 @@ Evaluation Metrics (classification):
 
 - Accuracy: percent of correct predictions
 - Sensitivity: percent of correct positive predictions
-- Spesificity: percent of correct negative predictions
-- ROC Curve: Sensitivity and Spesificity
+- Specificity: percent of correct negative predictions
+- ROC Curve: Sensitivity and Specificity
 - AUC: single measure of ROC Curve
 - Cost Benefit measures: derived from Sensitivity and Spesificity
+
+# Resources:
+
+- Data Science with R
+- tidymodels.org

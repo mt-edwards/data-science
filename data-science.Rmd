@@ -27,7 +27,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # Data Science and Data Engineering
 
-Data Science and Data Engineering are quite different
+Data Science and Data Engineering differene:
 
 - **Data Engineering**: data storage, access and compute.
 - **Data Science**: data exploration and induction.
@@ -49,9 +49,9 @@ Types of data:
 Types projects:
 
 - **Supervised Learning** (predict output)
-- Unsupervised Learning
+- Unsupervised Learning 
 - Semi-supervised Learning
-- Reinforcement Learning
+- Reinforcement Learning (e.g. AI and Robotics)
 
 Types of supervised learning:
 
@@ -139,13 +139,12 @@ These distributions are very important for model building.
 
 Data Preprocessing is about transforming the data so that a model can processes it.
 
-Often each model requires a different preprocessing pipeline.
-
-EDA is used to suggest the variable transformations required by a model.
+- Different models require different preprocessing
+- EDA motivates variable transformations
 
 ## Univariate Transformations
 
-- Log / Box-Cox: remove skew
+- Log: remove skew
 - Normalise: centre and scale
 - Grouping: combining nominal levels
 
@@ -157,28 +156,28 @@ EDA is used to suggest the variable transformations required by a model.
 
 # Model Building
 
-Popular models include:
+Popular classification models include:
 
 - Logistic Regression
 - Random Forest
 - Support Vector Machine
+- k-Nearest Neighbours
 
 Each of these models has different preprocessing requirements.
 
 # Model Evaluation
 
-At this stage the model is evaluated for it's performance. However, how the model is evaluated can be decided early on in the workflow. 
+At this stage the model is evaluated for it's performance. 
 
-Evaluation Metrics (classification):
+Classification evaluation metrics:
 
 - Accuracy: percent of correct predictions
 - Sensitivity: percent of correct positive predictions
 - Specificity: percent of correct negative predictions
-- ROC Curve: Sensitivity and Specificity
-- AUC: single measure of ROC Curve
-- Cost Benefit measures: derived from Sensitivity and Spesificity
+- ROC Curve and AUC measures
+- Cost / Benefit measures: derived from Sensitivity and Specificity
 
 # Resources:
 
-- Data Science with R
-- tidymodels.org
+- [Data Science with R](https://r4ds.had.co.nz/)
+- https://www.tidymodels.org/

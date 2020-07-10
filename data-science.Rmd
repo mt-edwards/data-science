@@ -2,41 +2,27 @@
 title: "Data Science Workflow"
 author: "Matthew Edwards"
 date: "09/07/2020"
-output:
-  revealjs::revealjs_presentation:
-    #theme: night
-    transition: none
-    center: false
+output: 
+  ioslides_presentation:
+    widescreen: true
 ---
-
-<style type="text/css">
-  .reveal p {
-    text-align: left;
-  }
-  .reveal ul {
-    display: block;
-  }
-  .reveal ol {
-    display: block;
-  }
-</style>
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-# Data Science and Data Engineering
+# Data Science
 
-Data Science and Data Engineering differene:
+## Data Engineering
+
+Data Science and Data Engineering different:
 
 - **Data Engineering**: data storage, access and compute.
 - **Data Science**: data exploration and induction.
 
-*"You should only do engineering if you know what you are doing and you should only do science if you do not."* - Richard Hamming
-
 Data Science is similar to **Statistics**
 
-## Data Science - Data
+## Data
 
 Types of data:
 
@@ -44,7 +30,7 @@ Types of data:
 - Text (Natural Language Processing)
 - Images (Computer Vision)
 
-## Data Science - Projects
+## Projects
 
 Types projects:
 
@@ -58,7 +44,7 @@ Types of supervised learning:
 - **Classification** (nominal output)
 - Regression (numeric output)
 
-## Data Science - Stages
+## Stages
 
 Data Science stages for a supervised learning project:
 
@@ -73,22 +59,18 @@ These stages are **iterated** (not numbered).
 
 # Data Tidying
 
-Obtain [tidy data](https://vita.had.co.nz/papers/tidy-data.pdf):
+## Data Tidying
+
+Obtain [tidy data form](https://vita.had.co.nz/papers/tidy-data.pdf):
 
 1. Each variable forms a column.
 2. Each observation forms a row.
-3. Each type of observational unit forms a table
 
-One of these variables is the *output* (to be predicted) and the others are *predictors*.
-
-## Data Tidying
-
-Data tidying requires some exploratory data analysis:
-
-- Variable selection
-- Data quality
+This form is required for most data science tools. One of these variables is the *output* (to be predicted) and the others are *predictors*.
 
 # Data Splitting
+
+## Data Splitting
 
 Obtain two data sets:
 
@@ -97,13 +79,15 @@ Obtain two data sets:
 
 The test set is *only* used at the end of the project. The training set is also used for exploratory data analysis.
 
-# Exploratory Data Analysis (EDA)
+# Exploratory Data Analysis
 
-EDA is all about distributions. A distribution describes the variation within and between variables.
+## Overview
+
+Exploratory Data Analysis is all about distributions. A distribution describes the variation within and between variables.
 
 Types of distribution:
 
-- predictor distributions
+- predictor and output distributions
 - predictor-output distributions
 - predictor-predictor distributions
 
@@ -131,30 +115,20 @@ Types of relationship:
 - Weak or Strong
 - Linear or Non-linear
 
-## Predictor-predictor Distributions
-
-These distributions are very important for model building.
-
 # Data Preprocessing
 
-Data Preprocessing is about transforming the data so that a model can processes it.
+## Data Preprocessing
 
-- Different models require different preprocessing
-- EDA motivates variable transformations
+Data Preprocessing is about transforming the data so that a model can processes it. EDA motivates variable transformations
 
-## Univariate Transformations
+Univariate Transformations: 
 
-- Log: remove skew
-- Normalise: centre and scale
-- Grouping: combining nominal levels
-
-## Multivariate Transformations
-
-- Linear Projection: strong linear predictor-predictor relationships
-- Non-linear Projection: strong non-linear predictor-predictor relationships
-- Combining variables manually: e.g. weight and height to BMI. 
+- **Log**: remove skewness
+- **Normalise**: centre and scale
 
 # Model Building
+
+## Model Building
 
 Popular classification models include:
 
@@ -163,9 +137,9 @@ Popular classification models include:
 - Support Vector Machine
 - k-Nearest Neighbours
 
-Each of these models has different preprocessing requirements.
-
 # Model Evaluation
+
+## Model Evaluation
 
 At this stage the model is evaluated for it's performance. 
 
@@ -174,10 +148,11 @@ Classification evaluation metrics:
 - Accuracy: percent of correct predictions
 - Sensitivity: percent of correct positive predictions
 - Specificity: percent of correct negative predictions
-- ROC Curve and AUC measures
 - Cost / Benefit measures: derived from Sensitivity and Specificity
 
-# Resources:
+# Resources
+
+## Resources
 
 - [Data Science with R](https://r4ds.had.co.nz/)
 - https://www.tidymodels.org/

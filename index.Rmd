@@ -154,5 +154,5 @@ Classification evaluation metrics:
 
 ## Resources
 
-- [Data Science with R](https://r4ds.had.co.nz/)
+- [R for Data Science R](https://r4ds.had.co.nz/)
 - https://www.tidymodels.org/

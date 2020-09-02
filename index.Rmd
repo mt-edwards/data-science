@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Data Engineering
 
-Data Science and Data Engineering different:
+Data Science and Data Engineering difference:
 
 - **Data Engineering**: data storage, access and compute.
 - **Data Science**: data exploration and inference (e.g. prediction / explanation)
@@ -52,7 +52,7 @@ Data Science stages for a supervised learning project:
 - Data Splitting
 - Exploratory Data Analysis (EDA)
 - Data Pre-processing
-- Model Building
+- Model Building / Tuning
 - Model Evaluation
  
 These stages are **iterated** (not numbered).
@@ -74,10 +74,10 @@ This form is required for most data science tools. One of these variables is the
 
 Obtain two data sets:
 
-1. **Training set**: this data set is used to build the model (e.g. past exam papers)
+1. **Training set**: this data set is used to build / tune the model (e.g. past exam papers)
 2. **Test set**: this data set is used to evaluate the model (e.g. exam paper)
 
-The test set is *only* used at the end of the project. The training set is also used for EDA
+The test set is *only* used at the end of the project. The training set is also used for EDA.
 
 # Exploratory Data Analysis
 
@@ -93,16 +93,16 @@ Types of distribution:
 
 This stage affects data pre-processing and model building.
 
-## Predictor Distributions (numeric)
+## Input Distributions (numeric)
 
-Explored using "histograms":
+Explored using **histograms**:
 
 - Centre (e.g. mean)
 - Spread (e.g. variance)
 - Skewness
 - Outliers
 
-## Predictor Distributions (categorical)
+## Input Distributions (categorical)
 
 Explored using **bar charts**:
 
@@ -110,7 +110,7 @@ Explored using **bar charts**:
 - Sparsity
 - Balance
 
-## Predictor-output Distributions
+## Input-output Distributions
 
 Explored using **scatter plots**:
 
@@ -121,7 +121,7 @@ Explored using **scatter plots**:
 
 ## Data Preprocessing
 
-Data Preprocessing is about transforming the data so that a model can processes it. EDA motivates variable transformations
+Data Pre-processing is about transforming the data so that a model can processes it. EDA motivates variable transformations.
 
 Univariate Transformations: 
 
@@ -158,3 +158,4 @@ Classification evaluation metrics:
 
 - [R for Data Science](https://r4ds.had.co.nz/)
 - https://www.tidymodels.org/
+- Slides: https://mt-edwards.github.io/data-science/

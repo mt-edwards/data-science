@@ -3133,7 +3133,7 @@ slide:not(.current) .plotly.html-widget{
 
 <ul>
 <li><strong>Data Engineering</strong>: data storage, access and compute.</li>
-<li><strong>Data Science</strong>: data exploration and induction.</li>
+<li><strong>Data Science</strong>: data exploration and inference (e.g. prediction / explanation)</li>
 </ul>
 
 <p>Data Science is similar to <strong>Statistics</strong></p>
@@ -3162,7 +3162,7 @@ slide:not(.current) .plotly.html-widget{
 <p>Types of supervised learning:</p>
 
 <ul>
-<li><strong>Classification</strong> (nominal output)</li>
+<li><strong>Classification</strong> (categorical output)</li>
 <li>Regression (numeric output)</li>
 </ul>
 
@@ -3173,8 +3173,8 @@ slide:not(.current) .plotly.html-widget{
 <ul>
 <li>Data Tidying</li>
 <li>Data Splitting</li>
-<li>Exploratory Data Analysis</li>
-<li>Data Preprocessing</li>
+<li>Exploratory Data Analysis (EDA)</li>
+<li>Data Pre-processing</li>
 <li>Model Building</li>
 <li>Model Evaluation</li>
 </ul>
@@ -3192,7 +3192,7 @@ slide:not(.current) .plotly.html-widget{
 <li>Each observation forms a row.</li>
 </ol>
 
-<p>This form is required for most data science tools. One of these variables is the <em>output</em> (to be predicted) and the others are <em>predictors</em>.</p>
+<p>This form is required for most data science tools. One of these variables is the <em>output</em> (to be predicted) and the others are the <em>input</em> variables.</p>
 
 </article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Data Splitting</h2></hgroup><article  id="data-splitting">
 
@@ -3201,11 +3201,11 @@ slide:not(.current) .plotly.html-widget{
 <p>Obtain two data sets:</p>
 
 <ol>
-<li><strong>Training set</strong>: this data set is used to build the model</li>
-<li><strong>Test set</strong>: this data set is used to evaluate the model</li>
+<li><strong>Training set</strong>: this data set is used to build the model (e.g. past exam papers)</li>
+<li><strong>Test set</strong>: this data set is used to evaluate the model (e.g. exam paper)</li>
 </ol>
 
-<p>The test set is <em>only</em> used at the end of the project. The training set is also used for exploratory data analysis.</p>
+<p>The test set is <em>only</em> used at the end of the project. The training set is also used for EDA</p>
 
 </article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Exploratory Data Analysis</h2></hgroup><article  id="exploratory-data-analysis">
 
@@ -3216,16 +3216,16 @@ slide:not(.current) .plotly.html-widget{
 <p>Types of distribution:</p>
 
 <ul>
-<li>predictor and output distributions</li>
-<li>predictor-output distributions</li>
-<li>predictor-predictor distributions</li>
+<li>input and output distributions</li>
+<li>input-output distributions</li>
+<li>input-input distributions</li>
 </ul>
 
-<p>This stage affects data preprocessing and model building.</p>
+<p>This stage affects data pre-processing and model building.</p>
 
-</article></slide><slide class=""><hgroup><h2>Predictor Distributions</h2></hgroup><article  id="predictor-distributions">
+</article></slide><slide class=""><hgroup><h2>Predictor Distributions (numeric)</h2></hgroup><article  id="predictor-distributions-numeric">
 
-<p>Numeric:</p>
+<p>Explored using &ldquo;histograms&rdquo;:</p>
 
 <ul>
 <li>Centre (e.g. mean)</li>
@@ -3234,21 +3234,23 @@ slide:not(.current) .plotly.html-widget{
 <li>Outliers</li>
 </ul>
 
-<p>Nominal:</p>
+</article></slide><slide class=""><hgroup><h2>Predictor Distributions (categorical)</h2></hgroup><article  id="predictor-distributions-categorical">
+
+<p>Explored using <strong>bar charts</strong>:</p>
 
 <ul>
-<li>Number of levels</li>
+<li>Number of classes</li>
 <li>Sparsity</li>
 <li>Balance</li>
 </ul>
 
 </article></slide><slide class=""><hgroup><h2>Predictor-output Distributions</h2></hgroup><article  id="predictor-output-distributions">
 
-<p>Types of relationship:</p>
+<p>Explored using <strong>scatter plots</strong>:</p>
 
 <ul>
-<li>Weak or Strong</li>
-<li>Linear or Non-linear</li>
+<li>Weak or strong associations</li>
+<li>Linear or non-linear associations</li>
 </ul>
 
 </article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Data Preprocessing</h2></hgroup><article  id="data-preprocessing">

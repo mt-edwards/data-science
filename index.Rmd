@@ -18,7 +18,7 @@ knitr::opts_chunk$set(echo = FALSE)
 Data Science and Data Engineering different:
 
 - **Data Engineering**: data storage, access and compute.
-- **Data Science**: data exploration and induction.
+- **Data Science**: data exploration and inference (e.g. prediction / explanation)
 
 Data Science is similar to **Statistics**
 
@@ -41,7 +41,7 @@ Types projects:
 
 Types of supervised learning:
 
-- **Classification** (nominal output)
+- **Classification** (categorical output)
 - Regression (numeric output)
 
 ## Stages
@@ -50,8 +50,8 @@ Data Science stages for a supervised learning project:
 
 - Data Tidying
 - Data Splitting
-- Exploratory Data Analysis
-- Data Preprocessing
+- Exploratory Data Analysis (EDA)
+- Data Pre-processing
 - Model Building
 - Model Evaluation
  
@@ -66,7 +66,7 @@ Obtain [tidy data form](https://vita.had.co.nz/papers/tidy-data.pdf):
 1. Each variable forms a column.
 2. Each observation forms a row.
 
-This form is required for most data science tools. One of these variables is the *output* (to be predicted) and the others are *predictors*.
+This form is required for most data science tools. One of these variables is the *output* (to be predicted) and the others are the *input* variables.
 
 # Data Splitting
 
@@ -74,10 +74,10 @@ This form is required for most data science tools. One of these variables is the
 
 Obtain two data sets:
 
-1. **Training set**: this data set is used to build the model
-2. **Test set**: this data set is used to evaluate the model
+1. **Training set**: this data set is used to build the model (e.g. past exam papers)
+2. **Test set**: this data set is used to evaluate the model (e.g. exam paper)
 
-The test set is *only* used at the end of the project. The training set is also used for exploratory data analysis.
+The test set is *only* used at the end of the project. The training set is also used for EDA
 
 # Exploratory Data Analysis
 
@@ -87,33 +87,35 @@ Exploratory Data Analysis is all about distributions. A distribution describes t
 
 Types of distribution:
 
-- predictor and output distributions
-- predictor-output distributions
-- predictor-predictor distributions
+- input and output distributions
+- input-output distributions
+- input-input distributions
 
-This stage affects data preprocessing and model building.
+This stage affects data pre-processing and model building.
 
-## Predictor Distributions
+## Predictor Distributions (numeric)
 
-Numeric:
+Explored using "histograms":
 
 - Centre (e.g. mean)
 - Spread (e.g. variance)
 - Skewness
 - Outliers
 
-Nominal:
+## Predictor Distributions (categorical)
 
-- Number of levels
+Explored using **bar charts**:
+
+- Number of classes
 - Sparsity
 - Balance
 
 ## Predictor-output Distributions
 
-Types of relationship:
+Explored using **scatter plots**:
 
-- Weak or Strong
-- Linear or Non-linear
+- Weak or strong associations
+- Linear or non-linear associations
 
 # Data Preprocessing
 

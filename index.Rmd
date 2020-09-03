@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Data Engineering
 
-Data Science and Data Engineering difference:
+Data Science and Data Engineering differences:
 
 - **Data Engineering**: data storage, access and compute.
 - **Data Science**: data exploration and inference (e.g. prediction / explanation)
@@ -26,35 +26,35 @@ Data Science is similar to **Statistics**
 
 Types of data:
 
-- **Tabular**
-- Text (Natural Language Processing)
-- Images (Computer Vision)
+- **Table data**
+- Text data (Natural Language Processing)
+- Image data (Computer Vision)
 
 ## Projects
 
-Types projects:
+Types of project:
 
 - **Supervised Learning** (predict output)
 - Unsupervised Learning 
 - Semi-supervised Learning
 - Reinforcement Learning (e.g. AI and Robotics)
 
-Types of supervised learning:
+Types of Supervised Learning:
 
 - **Classification** (categorical output)
 - Regression (numeric output)
 
 ## Stages
 
-Data Science stages for a supervised learning project:
+Data Science stages for a Supervised Learning project:
 
-- Data Tidying
-- Data Splitting
+- Data tidying
+- Data splitting
 - Exploratory Data Analysis (EDA)
-- Data Pre-processing
-- Model Building / Tuning
-- Model Evaluation
- 
+- Data pre-processing
+- Model building / tuning
+- Model evaluation
+
 These stages are **iterated** (not numbered).
 
 # Data Tidying
@@ -63,10 +63,10 @@ These stages are **iterated** (not numbered).
 
 Obtain [tidy data form](https://vita.had.co.nz/papers/tidy-data.pdf):
 
-1. Each variable forms a column.
-2. Each observation forms a row.
+1. Each variable forms a column
+2. Each example forms a row
 
-This form is required for most data science tools. One of these variables is the *output* (to be predicted) and the others are the *input* variables.
+This form is required for most Data Science tools. One variable is the *output* (to be predicted) and the other variables are the *inputs*.
 
 # Data Splitting
 
@@ -74,24 +74,24 @@ This form is required for most data science tools. One of these variables is the
 
 Obtain two data sets:
 
-1. **Training set**: this data set is used to build / tune the model (e.g. past exam papers)
-2. **Test set**: this data set is used to evaluate the model (e.g. exam paper)
+1. **Training data**: used to build / tune the model (e.g. past exam papers)
+2. **Testing data**: used to evaluate the model (e.g. exam paper)
 
-The test set is *only* used at the end of the project. The training set is also used for EDA.
+The testing data is *only* used for model evaluation. The training data is used for everything else.
 
 # Exploratory Data Analysis
 
 ## Overview
 
-Exploratory Data Analysis is all about distributions. A distribution describes the variation within and between variables.
+EDA is all about distributions. A distribution describes the variation within and between variables.
 
 Types of distribution:
 
-- input and output distributions
-- input-output distributions
-- input-input distributions
+- Input and output distributions
+- Input-output distributions
+- Input-input distributions
 
-This stage affects data pre-processing and model building.
+This stage affects data pre-processing and model building / tuning.
 
 ## Input Distributions (numeric)
 
@@ -117,9 +117,9 @@ Explored using **scatter plots**:
 - Weak or strong associations
 - Linear or non-linear associations
 
-# Data Preprocessing
+# Data Pre-processing
 
-## Data Preprocessing
+## Data Pre-processing
 
 Data Pre-processing is about transforming the data so that a model can processes it. EDA motivates variable transformations.
 
@@ -147,10 +147,10 @@ At this stage the model is evaluated for it's performance.
 
 Classification evaluation metrics:
 
-- Accuracy: percent of correct predictions
-- Sensitivity: percent of correct positive predictions
-- Specificity: percent of correct negative predictions
-- Cost / Benefit measures: derived from Sensitivity and Specificity
+- Accuracy (% correct predictions)
+- Sensitivity (% correct predictions of positive class)
+- Specificity (% correct predictions of negative class)
+- Cost / benefit measures
 
 # Resources
 

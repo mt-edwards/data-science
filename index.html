@@ -3129,7 +3129,7 @@ slide:not(.current) .plotly.html-widget{
 
 </article></slide><slide class=""><hgroup><h2>Data Engineering</h2></hgroup><article  id="data-engineering">
 
-<p>Data Science and Data Engineering difference:</p>
+<p>Data Science and Data Engineering differences:</p>
 
 <ul>
 <li><strong>Data Engineering</strong>: data storage, access and compute.</li>
@@ -3143,14 +3143,14 @@ slide:not(.current) .plotly.html-widget{
 <p>Types of data:</p>
 
 <ul>
-<li><strong>Tabular</strong></li>
-<li>Text (Natural Language Processing)</li>
-<li>Images (Computer Vision)</li>
+<li><strong>Table data</strong></li>
+<li>Text data (Natural Language Processing)</li>
+<li>Image data (Computer Vision)</li>
 </ul>
 
 </article></slide><slide class=""><hgroup><h2>Projects</h2></hgroup><article  id="projects">
 
-<p>Types projects:</p>
+<p>Types of project:</p>
 
 <ul>
 <li><strong>Supervised Learning</strong> (predict output)</li>
@@ -3159,7 +3159,7 @@ slide:not(.current) .plotly.html-widget{
 <li>Reinforcement Learning (e.g. AI and Robotics)</li>
 </ul>
 
-<p>Types of supervised learning:</p>
+<p>Types of Supervised Learning:</p>
 
 <ul>
 <li><strong>Classification</strong> (categorical output)</li>
@@ -3168,15 +3168,15 @@ slide:not(.current) .plotly.html-widget{
 
 </article></slide><slide class=""><hgroup><h2>Stages</h2></hgroup><article  id="stages">
 
-<p>Data Science stages for a supervised learning project:</p>
+<p>Data Science stages for a Supervised Learning project:</p>
 
 <ul>
-<li>Data Tidying</li>
-<li>Data Splitting</li>
+<li>Data tidying</li>
+<li>Data splitting</li>
 <li>Exploratory Data Analysis (EDA)</li>
-<li>Data Pre-processing</li>
-<li>Model Building</li>
-<li>Model Evaluation</li>
+<li>Data pre-processing</li>
+<li>Model building / tuning</li>
+<li>Model evaluation</li>
 </ul>
 
 <p>These stages are <strong>iterated</strong> (not numbered).</p>
@@ -3188,11 +3188,11 @@ slide:not(.current) .plotly.html-widget{
 <p>Obtain <a href='https://vita.had.co.nz/papers/tidy-data.pdf' title=''>tidy data form</a>:</p>
 
 <ol>
-<li>Each variable forms a column.</li>
-<li>Each observation forms a row.</li>
+<li>Each variable forms a column</li>
+<li>Each example forms a row</li>
 </ol>
 
-<p>This form is required for most data science tools. One of these variables is the <em>output</em> (to be predicted) and the others are the <em>input</em> variables.</p>
+<p>This form is required for most Data Science tools. One variable is the <em>output</em> (to be predicted) and the other variables are the <em>inputs</em>.</p>
 
 </article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Data Splitting</h2></hgroup><article  id="data-splitting">
 
@@ -3201,27 +3201,27 @@ slide:not(.current) .plotly.html-widget{
 <p>Obtain two data sets:</p>
 
 <ol>
-<li><strong>Training set</strong>: this data set is used to build the model (e.g. past exam papers)</li>
-<li><strong>Test set</strong>: this data set is used to evaluate the model (e.g. exam paper)</li>
+<li><strong>Training data</strong>: used to build / tune the model (e.g. past exam papers)</li>
+<li><strong>Testing data</strong>: used to evaluate the model (e.g. exam paper)</li>
 </ol>
 
-<p>The test set is <em>only</em> used at the end of the project. The training set is also used for EDA.</p>
+<p>The testing data is <em>only</em> used for model evaluation. The training data is used for everything else.</p>
 
 </article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Exploratory Data Analysis</h2></hgroup><article  id="exploratory-data-analysis">
 
 </article></slide><slide class=""><hgroup><h2>Overview</h2></hgroup><article  id="overview">
 
-<p>Exploratory Data Analysis is all about distributions. A distribution describes the variation within and between variables.</p>
+<p>EDA is all about distributions. A distribution describes the variation within and between variables.</p>
 
 <p>Types of distribution:</p>
 
 <ul>
-<li>input and output distributions</li>
-<li>input-output distributions</li>
-<li>input-input distributions</li>
+<li>Input and output distributions</li>
+<li>Input-output distributions</li>
+<li>Input-input distributions</li>
 </ul>
 
-<p>This stage affects data pre-processing and model building.</p>
+<p>This stage affects data pre-processing and model building / tuning.</p>
 
 </article></slide><slide class=""><hgroup><h2>Input Distributions (numeric)</h2></hgroup><article  id="input-distributions-numeric">
 
@@ -3253,11 +3253,11 @@ slide:not(.current) .plotly.html-widget{
 <li>Linear or non-linear associations</li>
 </ul>
 
-</article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Data Preprocessing</h2></hgroup><article  id="data-preprocessing">
+</article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Data Pre-processing</h2></hgroup><article  id="data-pre-processing">
 
-</article></slide><slide class=""><hgroup><h2>Data Preprocessing</h2></hgroup><article  id="data-preprocessing-1">
+</article></slide><slide class=""><hgroup><h2>Data Pre-processing</h2></hgroup><article  id="data-pre-processing-1">
 
-<p>Data Preprocessing is about transforming the data so that a model can processes it. EDA motivates variable transformations.</p>
+<p>Data Pre-processing is about transforming the data so that a model can processes it. EDA motivates variable transformations.</p>
 
 <p>Univariate Transformations:</p>
 
@@ -3288,10 +3288,10 @@ slide:not(.current) .plotly.html-widget{
 <p>Classification evaluation metrics:</p>
 
 <ul>
-<li>Accuracy: percent of correct predictions</li>
-<li>Sensitivity: percent of correct positive predictions</li>
-<li>Specificity: percent of correct negative predictions</li>
-<li>Cost / Benefit measures: derived from Sensitivity and Specificity</li>
+<li>Accuracy (% correct predictions)</li>
+<li>Sensitivity (% correct predictions of positive class)</li>
+<li>Specificity (% correct predictions of negative class)</li>
+<li>Cost / benefit measures</li>
 </ul>
 
 </article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Resources</h2></hgroup><article  id="resources">
